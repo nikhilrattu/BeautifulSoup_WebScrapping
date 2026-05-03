@@ -35,7 +35,39 @@ This project demonstrates the fundamentals of web scraping using BeautifulSoup. 
 - BeautifulSoup  
 - requests  
 
-## Project 2: E-commerce Product Scraper (Love & Flair)
+## Project 2: Books Website Scraper (Books to Scrape)
+
+### Overview
+This project involves scraping book data from a demo e-commerce website. It extracts key information such as book titles, product links, and prices across multiple pages and stores the data in a structured CSV file.
+
+### Purpose
+The goal of this project is to practice large-scale data extraction using pagination. It demonstrates how to systematically scrape multiple pages of a website and organize the collected data for further use, such as analysis or reporting.
+
+### Features
+- Scrapes data from 50 pages of a website  
+- Extracts book titles, links, and prices  
+- Handles structured HTML elements efficiently  
+- Stores extracted data into a CSV file using pandas  
+
+### Key Concepts and Logic Used
+- **HTTP Requests**: Used the `requests` library to fetch webpage content  
+- **HTML Parsing**: Utilized BeautifulSoup to navigate and extract data from HTML  
+- **Pagination Handling**: Iterated through multiple pages using a loop (`range(1,51)`)  
+- **Tag Navigation**: Accessed nested tags (`h3 > a`) to extract book names and links  
+- **Data Extraction**: Retrieved attributes such as text and `href` values  
+- **Data Aggregation**: Stored extracted data in a list of dictionaries  
+- **Data Export**: Converted the collected data into a pandas DataFrame and exported it as a CSV file  
+
+### Tech Stack
+- Python  
+- BeautifulSoup  
+- requests  
+- pandas  
+
+### Output
+The final output is a CSV file (`Books_info.csv`) containing details of books including name, link, and price.
+
+## Project 3: E-commerce Product Scraper (Love & Flair)
 
 ### Overview
 This project focuses on scraping product data from an e-commerce website. It extracts structured information such as product name, price, stock availability, color, and available sizes across multiple pages and stores the data in a CSV file for further analysis.
