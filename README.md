@@ -5,14 +5,6 @@ This repository documents practical implementations of web scraping techniques.
 
 ---
 
-## About This Repository
-
-This repository contains multiple mini-projects that demonstrate how to extract, process, and analyze data from websites.
-
-Each project is organized independently for clarity and scalability.
-
----
-
 ## Project 1: Basic Web Scraper
 
 ### Overview
