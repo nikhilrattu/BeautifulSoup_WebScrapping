@@ -93,3 +93,39 @@ The primary objective of this project is to demonstrate end-to-end web scraping,
 
 ### Output
 The final output is a CSV file (`products.csv`) containing structured product data.
+
+## Project 4: BeYoung New Arrivals Scraper (JSON Data Extraction)
+
+### Overview
+This project focuses on scraping product data from an e-commerce website that renders content dynamically. Instead of relying on visible HTML elements, the scraper extracts structured data directly from embedded JSON within the webpage.
+
+### Purpose
+The objective of this project is to demonstrate how to scrape modern websites built with frameworks like Next.js, where data is often stored inside script tags. It highlights an efficient approach to bypass complex HTML parsing by directly working with JSON data.
+
+### Features
+- Scrapes product data across multiple pages (pagination)  
+- Extracts structured data from embedded JSON (`__NEXT_DATA__`)  
+- Retrieves product name, regular price, discounted price, and discount percentage  
+- Calculates discount dynamically  
+- Stores cleaned data into a CSV file  
+
+### Key Concepts and Logic Used
+- **HTTP Requests**: Used the `requests` library with headers to simulate browser requests  
+- **HTML Parsing**: Used BeautifulSoup to locate the script tag containing JSON data  
+- **JSON Extraction**: Parsed embedded JSON using the `json` module  
+- **Deep Dictionary Navigation**: Accessed nested keys (`props → pageProps → details → products`)  
+- **Pagination Handling**: Iterated through multiple pages using a loop (`range(1,53)`)  
+- **Type Checking**: Used `isinstance()` to ensure safe arithmetic operations  
+- **Dynamic Calculation**: Computed discount percentage from price values  
+- **Data Structuring**: Stored extracted data in dictionaries and appended to a list  
+- **Data Export**: Converted the dataset into a pandas DataFrame and saved it as a CSV file  
+
+### Tech Stack
+- Python  
+- BeautifulSoup  
+- requests  
+- pandas  
+- json  
+
+### Output
+The final output is a CSV file (`BeYoung_Products.csv`) containing product details including pricing and discount information, along with the total number of products scraped.
